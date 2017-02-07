@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="26" tilewidth="100" tileheight="100" nextobjectid="15">
+ <tileset firstgid="1" name="stuff" tilewidth="300" tileheight="200" tilecount="9">
+  <tile id="0">
+   <image width="100" height="100" source="bridge.png"/>
+  </tile>
+  <tile id="1">
+   <image width="100" height="100" source="grass.png"/>
+  </tile>
+  <tile id="2">
+   <image width="100" height="100" source="graybrick.png"/>
+  </tile>
+  <tile id="3">
+   <image width="100" height="100" source="water1.png"/>
+   <animation>
+    <frame tileid="3" duration="500"/>
+    <frame tileid="4" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="4">
+   <image width="100" height="100" source="water2.png"/>
+  </tile>
+  <tile id="5">
+   <image width="100" height="200" source="door.png"/>
+  </tile>
+  <tile id="6">
+   <image width="100" height="100" source="bridge.png"/>
+  </tile>
+  <tile id="7">
+   <image width="300" height="100" source="plat1.png"/>
+  </tile>
+  <tile id="8">
+   <image width="300" height="100" source="plat2.png"/>
+  </tile>
+ </tileset>
+ <layer name="background" width="15" height="26">
+  <data encoding="base64" compression="zlib">
+   eJxjYmBgYBrFo3gUD0nMPMIwC5nhxIKEydU32DAjAXlKwhkACjoDuw==
+  </data>
+ </layer>
+ <layer name="back2" width="15" height="26">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYCYDwwAymxhASC8HBXo5KdCLD5Crl2mA7B1MeilJV9gwGxF6RwEEsI8wvQMFBsK/+MpJagAAt6UA9A==
+  </data>
+ </layer>
+ <layer name="foreground" width="15" height="26">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF5ABmImls+ojFw0HvKBgFo2DoAQB8TgCU
+  </data>
+ </layer>
+ <objectgroup color="#00ff00" name="wall">
+  <object id="3" x="600" y="2500">
+   <polyline points="0,0 0,-25 50,-75 100,-100 100,-300 -400,-300 -400,-400 -500,-400 -500,-500 100,-500 100,-900 -600,-900 -600,-2500 -500,-2500 -500,-1300 100,-1300 100,-1850 -400,-1850 -400,-2400 700,-2400 700,-1850 200,-1850 200,-1300 800,-1300 800,-2500 900,-2500 900,-900 200,-900 200,-500 800,-500 800,-400 700,-400 700,-300 200,-300 200,-100 250,-75 300,-25 300,0"/>
+  </object>
+  <object id="11" x="600" y="2500">
+   <polyline points="0,0 100,0 100,25 200,25 200,0 300,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#0597e6" name="portal">
+  <object id="14" name="c0" x="700" y="2500">
+   <properties>
+    <property name="dest" value="b1"/>
+   </properties>
+   <polyline points="0,0 50,25 100,0 50,-25"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#b315da" name="interact">
+  <object id="7" type="door" x="700" y="1175" width="100" height="25"/>
+  <object id="8" type="ladder" x="700" y="1600" width="100" height="400"/>
+  <object id="10" type="chest" x="650" y="225" width="200" height="100"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="8" tilewidth="100" tileheight="100" nextobjectid="12">
+ <tileset firstgid="1" name="stuff" tilewidth="100" tileheight="200" tilecount="6">
+  <tile id="0">
+   <image width="100" height="100" source="bridge.png"/>
+  </tile>
+  <tile id="1">
+   <image width="100" height="100" source="grass.png"/>
+  </tile>
+  <tile id="2">
+   <image width="100" height="100" source="graybrick.png"/>
+  </tile>
+  <tile id="3">
+   <image width="100" height="100" source="water1.png"/>
+  </tile>
+  <tile id="4">
+   <image width="100" height="100" source="water2.png"/>
+  </tile>
+  <tile id="5">
+   <image width="100" height="200" source="door.png"/>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="12" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjZmBgYB4AzIZDnGmEYQDCQADo
+  </data>
+ </layer>
+ <objectgroup color="#00ff00" name="wall">
+  <object id="3" x="200" y="300">
+   <polyline points="-200,0 400,0 400,-200 500,-200 500,0 1000,0 1000,500 -200,500 -200,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#046bcc" name="portal">
+  <object id="10" name="a0" x="600" y="250">
+   <properties>
+    <property name="dest" value="b0"/>
+   </properties>
+   <polyline points="0,0 0,-25 100,-25 100,0 50,75"/>
+  </object>
+ </objectgroup>
+</map>
